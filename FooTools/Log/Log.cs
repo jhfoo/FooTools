@@ -25,6 +25,11 @@ namespace FooTools
 
         private static ILog LogInstance = new LogConsole();
 
+        public static void SetLogInstance(ILog ThisLogInstance)
+        {
+            LogInstance = ThisLogInstance;
+        }
+
         public static void Debug(object obj)
         {
             LogInstance.Write(FormatText(obj.ToString(), LogLevelType.DEBUG), LogLevelType.DEBUG);
@@ -42,7 +47,6 @@ namespace FooTools
 
         private static string FormatText(string text, LogLevelType type)
         {
-            
             return OutputFormat.Replace("%dt", DateTimeString)
                 .Replace("%txt",text)
                 .Replace("%ll", Enum.GetName(typeof(LogLevelType), type))

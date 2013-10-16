@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FooTools
 {
-    interface ILog
+    public interface ILog
     {
         void Write(string text, Log.LogLevelType type);
     }

@@ -1,0 +1,4 @@
+[17-10-2013 02:43:49] - DEBUG:10 - This works!
+[17-10-2013 02:43:49] - ERROR:10 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 20
