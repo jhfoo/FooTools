@@ -1,0 +1,8 @@
+E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\bin\Debug\FooToolsTest.exe
+E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\bin\Debug\FooToolsTest.pdb
+E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\obj\x86\Debug\FooToolsTest.exe
+E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\obj\x86\Debug\FooToolsTest.pdb
+E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\bin\Debug\FooToolsTest.exe.config
+E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\bin\Debug\FooTools.dll
+E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\bin\Debug\FooTools.pdb
+E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\obj\x86\Debug\FooToolsTest.csprojResolveAssemblyReference.cache
