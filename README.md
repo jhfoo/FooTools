@@ -26,7 +26,7 @@ Logging
 2. 3 primary output: console, file, database
 3. For file: does file rotation by size, date (aggressive checking)
 4. For database: does housekeeping by record count (probably not aggressively to minimise overheads)
-5. Sample code:
+5. Sample code for console logging:
 
 ```csharp
 try
@@ -42,7 +42,23 @@ catch (Exception e)
 }
 ```
 
-
+6. Sample code for file logging:
+ 
+```csharp
+try
+{
+    Log.SetLogInstance(new LogFile(new LogFileConfig()
+        .SetBasePath(".")
+        .SetRotationBy(LogFile.RotateByType.DATE)
+        .SetFileExtension("log")));
+    Log.Debug("This works!");
+    throw new Exception("Boom!");
+}
+catch (Exception e)
+{
+    Log.Error(e);
+}
+```
 
 
 Development Framework
