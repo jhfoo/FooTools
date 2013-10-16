@@ -10,11 +10,40 @@ Objectives
 2. The library may be minimal (some say simplistic), but it will be sufficient to 'get the job done'.
 3. The library will be Mono friendly - who needs Windows to do .NET magic?
 
+Current Status
+--------------
+1. Still very much in the planning and design stage
+
 Desired Tools
 -------------
 1. RDBMS SQL query
 2. Logging (is it really needed when Log4N is so popular?)
 3. Config read-write
+
+Logging
+-------
+1. Flexible way to log stuff
+2. 3 primary output: console, file, database
+3. For file: does file rotation by size, date (aggressive checking)
+4. For database: does housekeeping by record count (probably not aggressively to minimise overheads)
+5. Sample code:
+
+```csharp
+try
+{
+    // to output to console, there is no need to initialise the Log class
+    // at all! Just use it!
+    Log.Debug("This works!");
+    throw new Exception("Boom!");
+}
+catch (Exception e)
+{
+    Log.Error(e);
+}
+```
+
+
+
 
 Development Framework
 ---------------------
