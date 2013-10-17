@@ -22,3 +22,23 @@ Config.Instance.SetValue("database", "app2", "boo!");
 Config.Instance.SetValue("database", "app3", 13);
 ```
 
+Default Settings
+----
+<table>
+  <tr>
+    <th>Field</th><th>Value</th>
+  </tr>
+  <tr>
+    <td>Filename</td><td>config.ini</td>
+  </tr>
+  <tr>
+    <td>IsAutoCreatePath</td><td>true</td>
+  </tr>
+</table>
+
+Notes
+-----
+
+1. If SetValue is called without initialising Config, Config will automatically initialise a ConfigIni instance with default values.
+2. 
+
