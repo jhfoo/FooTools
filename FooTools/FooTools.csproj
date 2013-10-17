@@ -45,6 +45,9 @@
     <Compile Include="Config\ConfigIni.cs" />
     <Compile Include="Config\ConfigIniConfig.cs" />
     <Compile Include="Config\IConfig.cs" />
+    <Compile Include="Database\DbParameter.cs" />
+    <Compile Include="Database\Database.cs" />
+    <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Log\LogFileConfig.cs" />
     <Compile Include="Log\ILog.cs" />
     <Compile Include="Log\Log.cs" />

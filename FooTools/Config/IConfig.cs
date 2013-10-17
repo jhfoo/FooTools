@@ -9,5 +9,6 @@ namespace FooTools
     {
         string GetValue(string section, string name);
         int SetValue(string section, string name, object value);
+        string[] GetNames(string section);
     }
 }

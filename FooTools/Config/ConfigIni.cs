@@ -69,11 +69,11 @@ namespace FooTools
                 }
                 else
                 {
-                    match = Regex.Match(line, @"(\S+)\s*=\s*(\S+)");
+                    match = Regex.Match(line, @"(\S+)\s*=\s*(\S.*)");
                     if (match.Success)
                     {
                         string name = match.Groups[1].Value;
-                        string value = match.Groups[2].Value;
+                        string value = match.Groups[2].Value.Trim();
 
                         cache[CurrentSection][name] = value;
                     }
@@ -125,6 +125,14 @@ namespace FooTools
             else
                 return "";
 
+        }
+
+
+        public string[] GetNames(string section)
+        {
+            if (!cache.ContainsKey(section))
+                return new string[] { };
+            return cache[section].Keys.ToArray();
         }
     }
 }

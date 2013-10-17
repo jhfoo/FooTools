@@ -18,8 +18,21 @@ namespace FooTools
         {
             get
             {
+                if (_instance == null)
+                    _instance = new ConfigIni(new ConfigIniConfig());
+
                 return _instance;
             }
+        }
+
+        public static string GetValue(string section, string name)
+        {
+            return Instance.GetValue(section, name);
+        }
+
+        public static int SetValue(string section, string name, object value)
+        {
+            return Instance.SetValue(section, name, value);
         }
     }
 }
