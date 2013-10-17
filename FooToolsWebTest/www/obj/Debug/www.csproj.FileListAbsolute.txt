@@ -1,0 +1,9 @@
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\obj\Debug\www.csprojResolveAssemblyReference.cache
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\bin\www.dll
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\bin\www.pdb
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\bin\EntityFramework.dll
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\bin\FooTools.dll
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\bin\EntityFramework.xml
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\bin\FooTools.pdb
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\obj\Debug\www.dll
+E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\www\obj\Debug\www.pdb

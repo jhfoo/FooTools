@@ -1,9 +1,0 @@
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\bin\FooToolsWebTest.dll
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\bin\FooToolsWebTest.pdb
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\bin\EntityFramework.dll
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\bin\FooTools.dll
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\bin\EntityFramework.xml
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\bin\FooTools.pdb
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\obj\Debug\FooToolsWebTest.dll
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\obj\Debug\FooToolsWebTest.pdb
-E:\My Stuff\C#\GitHub\FooTools\FooToolsWebTest\obj\Debug\FooToolsWebTest.csprojResolveAssemblyReference.cache

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using FooTools;
 
-namespace FooToolsWebTest.Controllers
+namespace www.Controllers
 {
     public class HomeController : Controller
     {
