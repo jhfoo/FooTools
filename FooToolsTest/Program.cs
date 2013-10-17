@@ -13,9 +13,10 @@ namespace FooToolsTest
             try
             {
                 Log.SetLogInstance(new LogFile(new LogFileConfig()
-                    .SetBasePath(".")
+                    .SetBasePath("../log")
                     .SetRotationBy(LogFile.RotateByType.DATE)
                     .SetFileExtension("log")));
+                Log.Normal("Normal logging");
                 Log.Debug("This works!");
                 throw new Exception("Boom!");
             }

@@ -35,6 +35,21 @@ namespace FooTools
             LogInstance.Write(FormatText(obj.ToString(), LogLevelType.DEBUG), LogLevelType.DEBUG);
         }
 
+        public static void Verbose(object obj)
+        {
+            LogInstance.Write(FormatText(obj.ToString(), LogLevelType.VERBOSE), LogLevelType.VERBOSE);
+        }
+
+        public static void Normal(object obj)
+        {
+            LogInstance.Write(FormatText(obj.ToString(), LogLevelType.NORMAL), LogLevelType.NORMAL);
+        }
+
+        public static void Warning(object obj)
+        {
+            LogInstance.Write(FormatText(obj.ToString(), LogLevelType.WARNING), LogLevelType.WARNING);
+        }
+
         public static void Error(Exception e)
         {
             string text = e.Message + "\r\n" + e.ToString();

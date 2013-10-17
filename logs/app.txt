@@ -1,0 +1,3 @@
+[17-10-2013 13:04:07] - NORMAL:9 - Hello from the web server!
+[17-10-2013 13:04:30] - NORMAL:11 - Hello from the web server!
+[17-10-2013 13:04:56] - NORMAL:6 - Hello from the web server!
