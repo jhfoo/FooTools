@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\Config.cs" />
+    <Compile Include="Config\ConfigIni.cs" />
+    <Compile Include="Config\ConfigIniConfig.cs" />
+    <Compile Include="Config\IConfig.cs" />
     <Compile Include="Log\LogFileConfig.cs" />
     <Compile Include="Log\ILog.cs" />
     <Compile Include="Log\Log.cs" />

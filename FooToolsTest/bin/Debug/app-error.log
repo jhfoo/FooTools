@@ -1,3 +1,57 @@
 [17-10-2013 11:18:04] - ERROR:9 - Boom!
 System.Exception: Boom!
    at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 20
+[17-10-2013 16:01:36] - ERROR:9 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 22
+[17-10-2013 16:04:09] - ERROR:9 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 22
+[17-10-2013 16:04:27] - ERROR:10 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 22
+[17-10-2013 16:05:17] - ERROR:9 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 22
+[17-10-2013 16:06:51] - ERROR:8 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 22
+[17-10-2013 16:08:52] - ERROR:10 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 22
+[17-10-2013 16:10:19] - ERROR:9 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 22
+[17-10-2013 16:10:33] - ERROR:10 - startIndex cannot be larger than length of string.
+Parameter name: startIndex
+System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex)
+   at FooTools.ConfigIni..ctor(ConfigIniConfig config) in E:\My Stuff\C#\GitHub\FooTools\FooTools\Config\ConfigIni.cs:line 31
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 21
+[17-10-2013 16:11:58] - ERROR:9 - startIndex cannot be larger than length of string.
+Parameter name: startIndex
+System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex)
+   at FooTools.ConfigIni..ctor(ConfigIniConfig config) in E:\My Stuff\C#\GitHub\FooTools\FooTools\Config\ConfigIni.cs:line 31
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 21
+[17-10-2013 16:14:52] - ERROR:9 - startIndex cannot be larger than length of string.
+Parameter name: startIndex
+System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string.
+Parameter name: startIndex
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex)
+   at FooTools.ConfigIni..ctor(ConfigIniConfig config) in E:\My Stuff\C#\GitHub\FooTools\FooTools\Config\ConfigIni.cs:line 31
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 21
+[17-10-2013 16:15:54] - ERROR:8 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 21
+[17-10-2013 16:16:30] - ERROR:9 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 21
+[17-10-2013 16:17:17] - ERROR:8 - Boom!
+System.Exception: Boom!
+   at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 21

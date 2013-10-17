@@ -15,6 +15,7 @@ namespace www.Controllers
         public ActionResult Index()
         {
             Log.Normal("Hello from the web server!");
+            throw new Exception("Boom!");
             return View();
         }
 

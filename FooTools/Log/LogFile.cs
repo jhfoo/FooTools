@@ -25,6 +25,7 @@ namespace FooTools
             string AssemblyBasePath = (config.ApplicationBasePath == ""
                 ? Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
                 : config.ApplicationBasePath) + "/";
+
             if (config.BasePath.StartsWith(".."))
                 // parent folder
                 LogPath = AssemblyBasePath + config.BasePath;
@@ -34,9 +35,15 @@ namespace FooTools
                     ? AssemblyBasePath.Substring(0, 2) + config.BasePath
                     : config.BasePath;
             else if (config.BasePath.StartsWith("."))
+            {
                 // current folder
-                LogPath = AssemblyBasePath + config.BasePath.Substring(2);
-            LogPath = Path.GetFullPath(LogPath) + "/";
+                LogPath = AssemblyBasePath;
+                if (config.BasePath.Length > 1)
+                    LogPath += config.BasePath.Substring(2);
+            }
+            LogPath = Path.GetFullPath(LogPath);
+            if (!LogPath.EndsWith("" + Path.DirectorySeparatorChar))
+                LogPath += Path.DirectorySeparatorChar;
 
             // auto create log folder
             if (!Directory.Exists(LogPath) && config.IsAutoCreatePath)
@@ -52,8 +59,9 @@ namespace FooTools
             string FullFilename = type == Log.LogLevelType.NORMAL
                 ? LogPath + config.filename + "." + config.FileExtension
                 : string.Format("{0}-{1}.{2}",
-                    config.filename, Enum.GetName(typeof(Log.LogLevelType), type).ToLower(), config.FileExtension);
+                    LogPath + config.filename, Enum.GetName(typeof(Log.LogLevelType), type).ToLower(), config.FileExtension);
 
+            //File.WriteAllText("e:/debug.txt", FullFilename);
             File.AppendAllText(FullFilename, text + "\r\n");
         }
     }

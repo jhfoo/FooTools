@@ -2,3 +2,7 @@
 [17-10-2013 02:43:49] - ERROR:10 - Boom!
 System.Exception: Boom!
    at FooToolsTest.Program.Main(String[] args) in E:\My Stuff\C#\GitHub\FooTools\FooToolsTest\Program.cs:line 20
+[17-10-2013 16:14:52] - NORMAL:9 - Normal logging
+[17-10-2013 16:15:54] - NORMAL:8 - Normal logging
+[17-10-2013 16:16:30] - NORMAL:9 - Normal logging
+[17-10-2013 16:17:17] - NORMAL:8 - Normal logging
