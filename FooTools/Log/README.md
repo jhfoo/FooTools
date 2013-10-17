@@ -45,3 +45,44 @@ catch (Exception e)
     Log.Error(e);
 }
 ```
+
+Web logging example
+----------------------------
+ 
+```csharp
+// Global.asax.cs
+protected void Application_Start()
+{
+    AreaRegistration.RegisterAllAreas();
+
+    RegisterGlobalFilters(GlobalFilters.Filters);
+    RegisterRoutes(RouteTable.Routes);
+    Log.SetLogInstance(new LogFile(new LogFileConfig()
+        .SetWebServer(Server)
+        .SetBasePath("../logs")
+        .SetFilename("www")));
+}
+```
+
+```csharp
+// HomeController.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using FooTools;
+
+namespace www.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            Log.Normal("Hello from the web server!");
+            return View();
+        }
+    }
+}
+
+```
