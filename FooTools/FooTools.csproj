@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="mysql.data">
+      <HintPath>.\mysql.data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -45,9 +48,12 @@
     <Compile Include="Config\ConfigIni.cs" />
     <Compile Include="Config\ConfigIniConfig.cs" />
     <Compile Include="Config\IConfig.cs" />
+    <Compile Include="Database\SqlClientFactory.cs" />
     <Compile Include="Database\DbParameter.cs" />
     <Compile Include="Database\Database.cs" />
     <Compile Include="Database\DatabaseManager.cs" />
+    <Compile Include="Database\ISqlClientFactory.cs" />
+    <Compile Include="Database\MySqlClientFactory.cs" />
     <Compile Include="Log\LogFileConfig.cs" />
     <Compile Include="Log\ILog.cs" />
     <Compile Include="Log\Log.cs" />

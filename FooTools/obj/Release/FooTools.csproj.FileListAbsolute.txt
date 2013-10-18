@@ -2,3 +2,5 @@ E:\My Stuff\C#\GitHub\FooTools\FooTools\bin\Release\FooTools.dll
 E:\My Stuff\C#\GitHub\FooTools\FooTools\bin\Release\FooTools.pdb
 E:\My Stuff\C#\GitHub\FooTools\FooTools\obj\Release\FooTools.dll
 E:\My Stuff\C#\GitHub\FooTools\FooTools\obj\Release\FooTools.pdb
+E:\My Stuff\C#\GitHub\FooTools\FooTools\bin\Release\mysql.data.dll
+E:\My Stuff\C#\GitHub\FooTools\FooTools\obj\Release\FooTools.csprojResolveAssemblyReference.cache

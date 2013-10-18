@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
-using System.Data.SqlClient;
 using FooTools;
 
 namespace FooToolsTest
@@ -27,19 +26,22 @@ namespace FooToolsTest
                 Log.Debug("Connecting to database...");
                 using (Database db = DatabaseManager.GetDatabase("default"))
                 {
-                    foreach (DataRow record in db.Select("select * from CallRecord where CallingPartyNumber = @cpn", 
-                        new DbParameter("@cpn", "555")).Rows)
-                    {
-                        Log.Debug("Record:" + (Guid)record["id"] + "," + (string)record["CallingPartyNumber"]);
-                    }
+                    Log.Debug("Insert: " + db.ExecSql("insert into testid (name) values (@name)",
+                        new DbParameter("@name", "it works")));
 
-                    Log.Debug("Delete: " + db.ExecSql("delete from CallRecord where CallingPartyNumber = @cpn", new DbParameter("@cpn", "ttt")));
-                    Log.Debug("Update: " + db.ExecSql("update CallRecord set DateTimeCalled = @dt", new DbParameter("@dt", DateTime.Now)));
-                    Log.Debug("Insert: " + db.ExecSql("insert into CallRecord (CallingPartyNumber, CalledPartyNumber, DateTimeCalled)"
-                        + " values (@cpn, @ccpn, @dtc)", 
-                        new DbParameter("@cpn", "765"),
-                        new DbParameter("@ccpn", "9078"),
-                        new DbParameter("@dtc", DateTime.Now)).ToString());
+                    //foreach (DataRow record in db.Select("select * from CallRecord where CallingPartyNumber = @cpn", 
+                    //    new DbParameter("@cpn", "555")).Rows)
+                    //{
+                    //    Log.Debug("Record:" + (Guid)record["id"] + "," + (string)record["CallingPartyNumber"]);
+                    //}
+
+                    //Log.Debug("Delete: " + db.ExecSql("delete from CallRecord where CallingPartyNumber = @cpn", new DbParameter("@cpn", "ttt")));
+                    //Log.Debug("Update: " + db.ExecSql("update CallRecord set DateTimeCalled = @dt", new DbParameter("@dt", DateTime.Now)));
+                    //Log.Debug("Insert: " + db.ExecSql("insert into CallRecord (CallingPartyNumber, CalledPartyNumber, DateTimeCalled)"
+                    //    + " values (@cpn, @ccpn, @dtc)", 
+                    //    new DbParameter("@cpn", "765"),
+                    //    new DbParameter("@ccpn", "9078"),
+                    //    new DbParameter("@dtc", DateTime.Now)).ToString());
                     
                 }
                 Console.WriteLine("[database] -> default = " + Config.GetValue("database", "default"));
