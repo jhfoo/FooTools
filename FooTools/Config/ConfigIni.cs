@@ -53,7 +53,7 @@ namespace FooTools
             this.config = config;
         }
 
-        private void ParseFile()
+        public void ParseFile()
         {
             string CurrentSection = "";
             cache[CurrentSection] = new Dictionary<string, string>();
@@ -127,12 +127,17 @@ namespace FooTools
 
         }
 
-
         public string[] GetNames(string section)
         {
             if (!cache.ContainsKey(section))
                 return new string[] { };
             return cache[section].Keys.ToArray();
+        }
+
+
+        public string[] GetSections()
+        {
+            return cache.Keys.ToArray();
         }
     }
 }

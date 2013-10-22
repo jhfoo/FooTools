@@ -50,6 +50,11 @@ namespace FooTools
             LogInstance.Write(FormatText(obj.ToString(), LogLevelType.WARNING), LogLevelType.WARNING);
         }
 
+        public static void Error(object obj)
+        {
+            LogInstance.Write(FormatText(obj.ToString(), LogLevelType.WARNING), LogLevelType.ERROR);
+        }
+
         public static void Error(Exception e)
         {
             string text = e.Message + "\r\n" + e.ToString();
