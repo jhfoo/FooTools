@@ -48,6 +48,15 @@ namespace FooTools
             }
         }
 
+        public DataRow SelectSingle(string sql, params DbParameter[] SqlParamList)
+        {
+            DataTable table = Select(sql, SqlParamList);
+            if (table.Rows.Count == 0)
+                return null;
+
+            return table.Rows[0];
+        }
+
         public DataTable Select(string sql, params DbParameter[] SqlParamList)
         {
             using (IDbCommand cmd = PrepareDbCommand(sql, SqlParamList))
