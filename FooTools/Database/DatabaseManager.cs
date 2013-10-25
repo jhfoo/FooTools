@@ -20,6 +20,11 @@ namespace FooTools
             return count;
         }
 
+        public static Database GetDatabase()
+        {
+            return GetDatabase("default");
+        }
+
         public static Database GetDatabase(string name)
         {
             if (!ConnStrings.ContainsKey(name))

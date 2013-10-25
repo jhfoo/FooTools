@@ -17,7 +17,7 @@ namespace FooTools
         public ConfigIni() { }
         public ConfigIni(ConfigIniConfig config)
         {
-            // compute absolute path
+            // compute current path for relative calculation
             string FilePath = (config.ApplicationBasePath == ""
                 ? Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
                 : config.ApplicationBasePath) + "/";
@@ -31,6 +31,10 @@ namespace FooTools
                 if (config.BasePath.Length > 1)
                     FilePath += config.BasePath.Substring(2);
             }
+            else
+                // absolute path
+                FilePath = config.BasePath;
+
             FilePath = Path.GetFullPath(FilePath);
             if (!FilePath.EndsWith("" + Path.DirectorySeparatorChar))
                 FilePath += Path.DirectorySeparatorChar;
