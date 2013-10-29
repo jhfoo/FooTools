@@ -100,7 +100,7 @@ namespace FooTools
 
         public void Dispose()
         {
-            Log.Debug("Connection closed");
+            //Log.Debug("Connection closed");
             conn.Close();
         }
     }

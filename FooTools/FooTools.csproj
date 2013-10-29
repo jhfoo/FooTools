@@ -54,6 +54,8 @@
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Database\ISqlClientFactory.cs" />
     <Compile Include="Database\MySqlClientFactory.cs" />
+    <Compile Include="HttpClient.cs" />
+    <Compile Include="HttpClientResponse.cs" />
     <Compile Include="Log\LogFileConfig.cs" />
     <Compile Include="Log\ILog.cs" />
     <Compile Include="Log\Log.cs" />
