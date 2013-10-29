@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.Common;
+using MySql.Data.Types;
 
 namespace FooTools
 {
@@ -55,6 +56,19 @@ namespace FooTools
                 return null;
 
             return table.Rows[0];
+        }
+
+        public static DateTime GetDateTime(object obj)
+        {
+            if (obj.GetType() == typeof(MySqlDateTime))
+            {
+                MySqlDateTime MyDateTime = (MySqlDateTime)obj;
+                if (MyDateTime.Year == 0)
+                    return DateTime.MinValue;
+                // else
+                return MyDateTime.GetDateTime();
+            }
+            return (DateTime)obj;
         }
 
         public DataTable Select(string sql, params DbParameter[] SqlParamList)
