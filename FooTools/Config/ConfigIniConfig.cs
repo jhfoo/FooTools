@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
+using System.IO;
+using System.Reflection;
 
 namespace FooTools
 {
@@ -51,6 +53,12 @@ namespace FooTools
             {
                 return _IsAutoCreateFile;
             }
+        }
+
+        public ConfigIniConfig SetAssemblyAsBase()
+        {
+            BasePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            return this;
         }
 
         public ConfigIniConfig SetWebServer(HttpServerUtility Server)

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
+using System.Reflection;
 using System.Text;
 using System.IO;
 using System.Threading;
@@ -21,7 +23,7 @@ namespace FooTools
         public static string filename = "app";
         public static bool IsOutput2Console = true;
         public static string DateTimeFormat = "dd-MM-yyyy HH:mm:ss";
-        public static string OutputFormat = "[%dt] - %ll:%tid - %txt";
+        public static string OutputFormat = "[%dt] %ll %cn.%mn:%tid - %txt";
 
         private static ILog LogInstance = new LogConsole();
 
@@ -67,9 +69,18 @@ namespace FooTools
 
         private static string FormatText(string text, LogLevelType type)
         {
+            StackFrame frame = new StackFrame(2);
+            MethodBase method = frame.GetMethod();
+            string ClassName = method.DeclaringType.ToString();
+            int index = ClassName.LastIndexOf('.');
+            if (index > 0)
+                ClassName = ClassName.Substring(index + 1);
+
             return OutputFormat.Replace("%dt", DateTimeString)
                 .Replace("%txt",text)
                 .Replace("%ll", Enum.GetName(typeof(LogLevelType), type))
+                .Replace("%cn", ClassName)
+                .Replace("%mn", method.Name)
                 .Replace("%tid", Thread.CurrentThread.ManagedThreadId.ToString());
         }
 
