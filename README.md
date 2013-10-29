@@ -12,14 +12,15 @@ Objectives
 
 Current Status
 --------------
-1. Still very much in the planning and design stage
+1. Basic tools are available and functional.
+2. Not considered matured. Use with care.
 
-Desired Tools
+Key Tools
 -------------
 1. RDBMS SQL query
 2. Logging (is it really needed when Log4N is so popular?)
 3. Config read-write
-
+4. Http client for basic GET/ POST needs. Removes the dependency for .NET 4.5
 
 
 Development Framework
