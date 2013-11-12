@@ -56,10 +56,10 @@ namespace FooTools
 
         public void Write(string text, Log.LogLevelType type)
         {
-            string FullFilename = type == Log.LogLevelType.NORMAL
+            string FullFilename = config.FilenameSuffix[(int)type] == ""
                 ? LogPath + config.filename + "." + config.FileExtension
                 : string.Format("{0}-{1}.{2}",
-                    LogPath + config.filename, Enum.GetName(typeof(Log.LogLevelType), type).ToLower(), config.FileExtension);
+                    LogPath + config.filename, config.FilenameSuffix[(int)type], config.FileExtension);
 
             //File.WriteAllText("e:/debug.txt", FullFilename);
             File.AppendAllText(FullFilename, text + "\r\n");

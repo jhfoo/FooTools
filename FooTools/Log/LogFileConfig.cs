@@ -12,10 +12,17 @@ namespace FooTools
         private string _ApplicationBasePath = "";
         private bool _IsAutoCreatePath = true;
 
-        public string BasePath = "";
-        public string FileExtension = "txt";
+        public string BasePath = ".";
+        public string FileExtension = "log";
         public string filename = "app";
         public LogFile.RotateByType RotateBy = LogFile.RotateByType.DATE;
+        public string[] FilenameSuffix = new string[] {
+            "DEBUG",
+            "VERBOSE",
+            "",
+            "",
+            "ERROR"
+        };
 
         public LogFileConfig() { }
 

@@ -11,6 +11,12 @@ namespace FooTools
 {
     public class Log
     {
+        public enum RotateByType
+        {
+            SIZE,
+            DATE
+        }
+
         public enum LogLevelType
         {
             DEBUG,
@@ -71,6 +77,7 @@ namespace FooTools
         {
             StackFrame frame = new StackFrame(2);
             MethodBase method = frame.GetMethod();
+
             string ClassName = method.DeclaringType.ToString();
             int index = ClassName.LastIndexOf('.');
             if (index > 0)
