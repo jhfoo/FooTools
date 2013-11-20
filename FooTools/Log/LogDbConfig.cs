@@ -11,6 +11,7 @@ namespace FooTools
         public int DayWindow = 3;
         public string DatabaseConn = "";
         public string LogTableName = "log";
+        public string OutputFormat = "%cn.%mn:%tid - %txt";
         public Log.RotateByType RotateBy = Log.RotateByType.SIZE;
 
         public LogDbConfig() { }

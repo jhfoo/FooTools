@@ -14,6 +14,7 @@ namespace FooTools
         public LogDb(LogDbConfig config)
         {
             this.config = config;
+            Log.OutputFormat = config.OutputFormat;
         }
 
         public void Write(string text, Log.LogLevelType type)
@@ -21,11 +22,11 @@ namespace FooTools
             if (db == null)
                 db = new Database(config.DatabaseConn);
 
-            db.ExecSql("insert into " + config.LogTableName + " (LogLevel, Group, Text, DataTimeModified) values"
-                + " (@LogLevel, @Group, @Text, @DateTimeModified)",
+            db.ExecSql("insert into " + config.LogTableName + " (LogLevel, GroupName, Message, DateTimeModified) values"
+                + " (@LogLevel, @GroupName, @Message, @DateTimeModified)",
                 new DbParameter("@LogLevel", Enum.GetName(typeof(Log.LogLevelType), type)),
-                new DbParameter("@Group", Log.filename),
-                new DbParameter("@Text", text),
+                new DbParameter("@GroupName", Log.filename.ToUpper()),
+                new DbParameter("@Message", text),
                 new DbParameter("@DateTimeModified", DateTime.Now));
         }
     }

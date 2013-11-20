@@ -23,9 +23,14 @@ namespace FooToolsTest
                 Config.SetInstance(new ConfigIni(new ConfigIniConfig()
                     .SetBasePath("../conf")));
                 DatabaseManager.Initialise();
+
+                Log.SetLogInstance(new LogDb(new LogDbConfig()
+                    .SetDatabaseConn(Config.GetValue("database", "default"))));
+
                 Log.Debug("Connecting to database...");
                 using (Database db = DatabaseManager.GetDatabase("default"))
                 {
+
                     Log.Debug("Insert: " + db.ExecSql("insert into testid (name) values (@name)",
                         new DbParameter("@name", "it works")));
 
