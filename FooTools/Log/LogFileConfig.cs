@@ -15,8 +15,7 @@ namespace FooTools
         public string BasePath = ".";
         public string FileExtension = "log";
         public string filename = "app";
-        public int archiveCount = 10;
-        public Log.RotateByType RotateBy = Log.RotateByType.DATE;
+        public LogFile.RotateByType RotateBy = LogFile.RotateByType.DATE;
         public string[] FilenameSuffix = new string[] {
             "DEBUG",
             "VERBOSE",
@@ -43,35 +42,9 @@ namespace FooTools
             return this;
         }
 
-        public LogFileConfig SetRotationBy(string type)
+        public LogFileConfig SetRotationBy(LogFile.RotateByType type)
         {
-            if (!string.IsNullOrEmpty(type))
-            {
-                switch (type.Trim().ToLower())
-                {
-                    case "date":
-                        this.RotateBy = Log.RotateByType.DATE;
-                        break;
-                    case "size":
-                        this.RotateBy = Log.RotateByType.SIZE;
-                        break;
-                    default:
-                        throw new Exception("Invalid [log] rotation type specified in config file: " + type + " (date or size)");
-                }
-            }
-
-            return this;
-        }
-
-        public LogFileConfig SetArchiveCount(string count)
-        {
-            int temp = -1;
-            if (!string.IsNullOrEmpty(count) && int.TryParse(count, out temp))
-                if (temp >= 0)
-                    this.archiveCount = temp;
-                else
-                    throw new Exception("Invalid [log] file count specified in config file: " + count + " (please specify an integer >= 0)");
-
+            this.RotateBy = type;
             return this;
         }
 

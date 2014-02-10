@@ -9,6 +9,11 @@ namespace FooTools
 {
     public class LogFile : ILog
     {
+        public enum RotateByType
+        {
+            DATE,
+            SIZE
+        }
 
         private LogFileConfig config = new LogFileConfig();
         private string LogPath = "";
@@ -48,102 +53,16 @@ namespace FooTools
 
             this.config = config;
         }
-        public string getFileFormat(Log.LogLevelType type)
-        {
-           return config.FilenameSuffix[(int)type] == ""
-                ? config.filename + "." + config.FileExtension
-                : string.Format("{0}-{1}.{2}", config.filename, config.FilenameSuffix[(int)type], config.FileExtension);
-        }
+
         public void Write(string text, Log.LogLevelType type)
         {
-            //determine file size
+            string FullFilename = config.FilenameSuffix[(int)type] == ""
+                ? LogPath + config.filename + "." + config.FileExtension
+                : string.Format("{0}-{1}.{2}",
+                    LogPath + config.filename, config.FilenameSuffix[(int)type], config.FileExtension);
 
-            string FullFilename = LogPath + getFileFormat(type);
-
-            string results = prepareLogFile(FullFilename, getFileFormat(type));
-
-            File.AppendAllText(FullFilename, text + "\r\n" + results);
+            //File.WriteAllText("e:/debug.txt", FullFilename);
+            File.AppendAllText(FullFilename, text + "\r\n");
         }
-
-        public string prepareLogFile(string FullFileName, string fileName)
-        {
-            //variables
-            int upperLimit = 1048576; //internal limit for size (applicable to date to prevent huge files)
-            string err = ""; //err
-
-            //logic
-            if (File.Exists(FullFileName))           
-            {
-                FileInfo f = new FileInfo(FullFileName);
-
-                //check rotate required
-                switch (this.config.RotateBy)
-                {                        
-                    case Log.RotateByType.DATE:
-                        if (f.LastWriteTime.Date != DateTime.Now.Date || f.Length >= upperLimit) //date & size
-                        {                         
-                            err += rotateLogFile(fileName);
-                        }                        
-                        break;
-
-                    default: //size
-                        if (f.Length >= upperLimit)
-                        {
-                            //rotate
-                            err += rotateLogFile(fileName);
-                        }                       
-                        //else do nothing
-                        break;
-
-                }
-            }
-
-            return err; //bubble up error messages
-        }
-
-        public string rotateLogFile(string fileName)
-        {
-            string fileExtension = this.config.FileExtension;
-            int UBound = this.config.archiveCount;
-            string err = "";
-
-            try
-            {
-                var files = Directory.GetFiles(this.LogPath, fileName + ".*").OrderBy(f => f).ToList();
-                if (files.Count > 1)
-                {
-                    //if there ar 1-10, discard 10
-                    for (int i = files.Count; i > 0; i--)
-                    {
-                        if (i >= UBound)
-                        {
-                            //delete file
-                            File.Delete(files[i - 1]);
-                        }
-                        else
-                        {
-                            //rename file
-                            string[] finalName = files[i - 1].Split('.');
-                            File.Move(files[i - 1], finalName[0] + "." + finalName[1] + "." + i.ToString() + "." + fileExtension);
-                        }
-                    }
-                }
-                else
-                {
-                    //rename fileName to fileName.1
-                    File.Move(files[0], files[0] + ".1." + fileExtension);
-                }
-            }
-            catch (Exception ex)
-            {
-                //recurssion will take care of the effects of midway routine abortions
-                err = ex.Message + Environment.NewLine;
-
-            }
-
-            return err; //bubble error messages to the top
-
-        }
-
     }
 }
