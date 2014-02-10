@@ -10,3 +10,14 @@ E:\personal\GitHub\FooTools\FooTools\bin\Release\mysql.data.dll
 E:\personal\GitHub\FooTools\FooTools\obj\Release\FooTools.csprojResolveAssemblyReference.cache
 E:\personal\GitHub\FooTools\FooTools\obj\Release\FooTools.dll
 E:\personal\GitHub\FooTools\FooTools\obj\Release\FooTools.pdb
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\bin\Release\FooTools.dll
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\bin\Release\FooTools.pdb
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\bin\Release\mysql.data.dll
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\obj\Release\FooTools.dll
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\obj\Release\FooTools.pdb
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\obj\Release\FooTools.csprojResolveAssemblyReference.cache
+C:\Users\LARA\Downloads\FooTools-master\FooTools-master\FooTools\bin\Release\FooTools.dll
+C:\Users\LARA\Downloads\FooTools-master\FooTools-master\FooTools\bin\Release\FooTools.pdb
+C:\Users\LARA\Downloads\FooTools-master\FooTools-master\FooTools\bin\Release\mysql.data.dll
+C:\Users\LARA\Downloads\FooTools-master\FooTools-master\FooTools\obj\Release\FooTools.dll
+C:\Users\LARA\Downloads\FooTools-master\FooTools-master\FooTools\obj\Release\FooTools.pdb
