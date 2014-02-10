@@ -11,6 +11,7 @@ namespace FooTools
     {
         public string UserId = "";
         public string UserPass = "";
+        public Version version = HttpVersion.Version11;
 
         public HttpClientResponse Post(string url, params object[] PostParams)
         {
@@ -20,6 +21,7 @@ namespace FooTools
             {
                 Log.Debug("HTTP POST: " + url);
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                request.ProtocolVersion = version;
                 request.Method = "POST";
                 if (UserId != "")
                     request.Credentials = new NetworkCredential(UserId, UserPass);

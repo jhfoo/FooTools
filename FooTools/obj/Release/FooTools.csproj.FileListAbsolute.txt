@@ -10,3 +10,9 @@ E:\personal\GitHub\FooTools\FooTools\bin\Release\mysql.data.dll
 E:\personal\GitHub\FooTools\FooTools\obj\Release\FooTools.csprojResolveAssemblyReference.cache
 E:\personal\GitHub\FooTools\FooTools\obj\Release\FooTools.dll
 E:\personal\GitHub\FooTools\FooTools\obj\Release\FooTools.pdb
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\bin\Release\FooTools.dll
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\bin\Release\FooTools.pdb
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\bin\Release\mysql.data.dll
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\obj\Release\FooTools.dll
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\obj\Release\FooTools.pdb
+E:\CloudStation\Personal\GitHub\FooTools\FooTools\obj\Release\FooTools.csprojResolveAssemblyReference.cache
